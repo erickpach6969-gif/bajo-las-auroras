@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071321"><meta name="description" content="Diario privado, finanzas y preparativos para Bajo las Auroras.">
+  <title>Bajo las Auroras — Mi camino hacia el sí</title>
+  <link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="aurora-bg" aria-hidden="true"></div>
+  <header class="topbar">
+    <button class="brand" data-page="inicio" aria-label="Ir al inicio"><span class="brand-mark">✦</span><span><strong>Bajo las Auroras</strong><small>MI CAMINO HACIA EL SÍ</small></span></button>
+    <div class="top-actions"><span class="privacy-pill"><i></i> Solo en este dispositivo</span><button class="icon-btn" id="backupBtn" title="Descargar copia de seguridad" aria-label="Descargar copia de seguridad">↗</button><button class="icon-btn" id="restoreBtn" title="Restaurar copia JSON" aria-label="Restaurar copia JSON">↙</button><button class="icon-btn" id="menuBtn" title="Abrir menú" aria-label="Abrir menú">☰</button></div>
+  </header>
+  <aside class="sidebar" id="sidebar">
+    <div class="nav-label">MI ESPACIO</div>
+    <button class="nav-item active" data-page="inicio"><span>⌂</span> Inicio</button>
+    <button class="nav-item" data-page="finanzas"><span>◈</span> Cada peso nos acerca</button>
+    <button class="nav-item" data-page="diario"><span>✎</span> Mi diario</button>
+    <button class="nav-item" data-page="cartas"><span>♡</span> Cartas para Andrea</button>
+    <button class="nav-item" data-page="viaje"><span>✧</span> Viaje a Canadá</button>
+    <button class="nav-item" data-page="historia"><span>⌁</span> Nuestra historia</button>
+    <button class="nav-item" data-page="ideas"><span>✦</span> Ideas y sorpresas</button>
+    <button class="nav-item" data-page="tareas"><span>☑</span> Tareas y objetivos</button>
+    <button class="nav-item" data-page="capsula"><span>◷</span> Cápsula del tiempo</button>
+    <div class="sidebar-bottom"><div class="tiny-stars">✦　·　✧　·　✦</div><p>Un día, las luces contarán<br>una parte de nuestra historia.</p><small>ERICK · SEPTIEMBRE 2027</small></div>
+  </aside>
+  <main id="main" tabindex="-1"><div class="loading">Preparando tu espacio…</div></main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-head"><div><span class="eyebrow" id="modalEyebrow">TU ESPACIO</span><h2 id="modalTitle">Nuevo registro</h2></div><button class="icon-btn" id="closeModal" aria-label="Cerrar">×</button></div><form id="modalForm"><div id="modalFields" class="form-grid"></div><div class="modal-actions"><button type="button" class="btn ghost" id="cancelModal">Cancelar</button><button type="submit" class="btn primary">Guardar</button></div></form></section></div>
+  <input type="file" id="restoreFile" accept="application/json,.json" hidden>
+  <script src="app.js"></script>
+</body></html>
